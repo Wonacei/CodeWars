@@ -6,10 +6,21 @@ function reverseWords(str) {
 }
 
 reverseWords(words);
-// besr result
 
-// function reverseWords(str){
-//     return str.trim().split(' ').reverse().join(' '); // reverse those words
-//   }
+// besr result
+function reverseWords(str) {
+    return str.trim().split(' ').reverse().join(' '); // reverse those words
+}
 
 // 002 
+
+let numbers = 12354445648;
+function descendingOrder(n) {
+    n = String(n);
+    return +n.split('').sort().reverse().join('');
+}
+console.log(descendingOrder(numbers));
+// best result
+function descendingOrder(n) {
+    return String(n).split('').sort().reverse().join('');
+}

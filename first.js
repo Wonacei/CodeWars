@@ -24,3 +24,12 @@ console.log(descendingOrder(numbers));
 function descendingOrder(n) {
     return String(n).split('').sort().reverse().join('');
 }
+
+// 003 
+
+function squareDigits(num) {
+
+    return +String(num).split('').map(pin => pin * pin).join('');
+}
+
+console.log(squareDigits(1235));

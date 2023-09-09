@@ -33,3 +33,67 @@ function squareDigits(num) {
 }
 
 console.log(squareDigits(1235));
+
+//004
+
+let pin = [true, true, true, false,
+    true, true, true, true,
+    true, false, true, false,
+    true, false, false, true,
+    true, true, true, true,
+    false, false, true, true];
+
+
+function countSheeps(arrayOfSheep) { //функция ищет кол=во ТРУ
+    let sheeps = 0;
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+
+        if (arrayOfSheep[i]) {
+            sheeps += 1; //sheeps++
+        }
+    }
+    return sheeps;
+}
+
+console.log(countSheeps(pin));
+
+//best
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+}
+
+//005 проверяет четная или нечетная сумма в массиве
+
+function oddOrEven(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    if ((sum % 2) == 0) {
+        return 'even';
+    } else {
+        return 'odd';
+    }
+}
+
+//best
+function oddOrEven(arr) {
+    return arr.reduce((a, b) => a + b, 0) % 2 ? 'odd' : 'even'; //нечет, четное
+}
+
+
+//006 на входе число, а на выходе ты считаешь овечек "1 sheep...2 sheep...3 sheep..."
+
+let countSheep = function (num) {
+    let murmur = '';
+    for (let i = 1; i <= num; i++) {
+        murmur += `${i} sheep...`;
+    }
+    return murmur;
+}
+
+// best и мой не плох а в других пошли методы через массивы  и диструктуризацию(вроде)
+
+
+//007
+
